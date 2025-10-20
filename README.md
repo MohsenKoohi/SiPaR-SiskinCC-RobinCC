@@ -1,5 +1,11 @@
 # [SiPaR-SiskinCC-RobinCC]()
 
+This repository contains the source code of SiskinCC and RobinCC, distributed CC algorithms. 
+The source code uses MPI and OpenMP. Some features of [LaganLighter](https://github.com/MohsenKoohi/LaganLighter/) repository has also been deployed.
+
+### Paper
+[On Optimizing Resource Utilization in Distributed Connected Components](https://doi.org/10.48550/arXiv.2507.03695)
+
 ### Documentation
 **[docs/readme.md](docs/readme.md)**
 
@@ -18,22 +24,39 @@
 
 ### Compiling and Executing Code
  - Make sure the requried libraries are accessible through `$LD_LIBRARY_PATH`.
- - Allocating machines in SLURM: 
- - Run `make alg...` (e.g. `make alg1_sapco_sort`). This builds the executible file and runs it for the test graph. 
- - For identifying input graph and other options, please refer to [Loading Graphs](docs/0.2-loading.md).
+ - Allocating machines in SLURM:
+   - Interactive allocation:
+     - `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0`
+     - `make siskincc_sample` 
+     - `make robincc_sample`
+   - Batch allocation:
+     - `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg1_siskincc  -df=/path/to/data-folders`
+     - `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg0_siskincc  -df=/path/to/data-folders`
  
 ### Supported Graph Types & Loading Graphs
- - [CompBin format](https://doi.org/10.48550/arXiv.2507.00716), 
- using [WG2CompBin library](https://github.com/MohsenKoohi/WG2CompBin)
- - [WebGraph format](https://webgraph.di.unimi.it/), using
-[ParaGrapher](https://github.com/MohsenKoohi/ParaGrapher) library.
+ - [CompBin format](https://doi.org/10.48550/arXiv.2507.00716), using [WG2CompBin library](https://github.com/MohsenKoohi/WG2CompBin), and 
+ - [WebGraph format](https://webgraph.di.unimi.it/), using [ParaGrapher library](https://github.com/MohsenKoohi/ParaGrapher) .
 
 Please refer to [Graph Loading Documentation](docs/0.2-loading.md).
 
 ### Evaluating a Number of Graph Datasets
 
 Please refer to [Launcher Script Documentaion](docs/0.3-launcher.md).
- 
+
+
+### Citation
+```
+@article{SiskinCC_RobinCC,
+ title={On Optimizing Resource Utilization in Distributed Connected Components}, 
+ author=Mohsen {Koohi Esfahani},
+ year={2025},
+ eprint={2507.03695},
+ archivePrefix={arXiv},
+ url={https://arxiv.org/abs/2507.03695},
+ doi={10.48550/arXiv.2507.03695}
+}
+```
+
 ### Bugs & Support
 
 If you receive wrong results or you are suspicious about parts of the code, 
