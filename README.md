@@ -64,11 +64,9 @@ please [contact us](https://orcid.org/0000-0002-7465-8003).
 
 ### License
 
-Licensed under the GNU v3 General Public License, as published by the Free Software Foundation. 
-You must not use this Software except in compliance with the terms of the License. 
-Unless required by applicable law or agreed upon in writing, this Software is distributed 
-on an "as is" basis, without any warranty; without even the implied warranty of 
-merchantability or fitness for a particular purpose, neither express nor implied. 
-For details see terms of the License (see attached file: LICENSE). 
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, 
+either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-#### Copyright 2025
+#### Copyright ©  2025, Mohsen Koohi Esfahani
