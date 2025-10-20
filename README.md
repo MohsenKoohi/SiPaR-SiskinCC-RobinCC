@@ -13,7 +13,7 @@ The source code uses MPI and OpenMP. The implementation incorporates some  compo
 - `git pull --recurse-submodules` or
 - You may set recursive submodule update globally using `git config --global submodule.recurse true` and then `git pull` fetches all updates.
 
-### Requirements
+### Requirements (Linux)
 1. Libraries: `mpi`, `openmp`, and `libnuma`
 2. Compiler: `gcc` with a version greater than 9 are required.
 3. For using ParaGrapher: `JDK` with a version greater than 15 and `libfuse`.
