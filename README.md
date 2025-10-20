@@ -26,12 +26,17 @@ The source code uses MPI and OpenMP. Some features of [LaganLighter](https://git
  - Make sure the requried libraries are accessible through `$LD_LIBRARY_PATH`.
  - Allocating machines in SLURM:
    - Interactive allocation:
+     - Mainly used for development and/or executing a single dataset.
+     - A sample execution of algirthms for [cnr-2000](http://data.law.di.unimi.it/webdata/cnr-2000/) in WebGraph format:
      - `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0`
      - `make siskincc_sample` 
      - `make robincc_sample`
    - Batch allocation:
+     - Mainly used for processing a set of datasets.
      - `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg1_siskincc  -df=/path/to/data-folders`
      - `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg0_siskincc  -df=/path/to/data-folders`
+     - An example: ![RobinCC Screenshot](docs/images/robincc.png) 
+
  
 ### Supported Graph Types & Loading Graphs
  - [CompBin format](https://doi.org/10.48550/arXiv.2507.00716), using [WG2CompBin library](https://github.com/MohsenKoohi/WG2CompBin), and 
@@ -42,7 +47,6 @@ Please refer to [Graph Loading Documentation](docs/0.2-loading.md).
 ### Evaluating a Number of Graph Datasets
 
 Please refer to [Launcher Script Documentaion](docs/0.3-launcher.md).
-
 
 ### Citation
 ```
