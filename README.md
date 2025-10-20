@@ -17,7 +17,7 @@ The source code uses MPI and OpenMP. The implementation incorporates some  compo
 1. Libraries: `mpi`, `openmp`, and `libnuma`
 2. Compiler: `gcc` with a version greater than 9 are required.
 3. For using ParaGrapher: `JDK` with a version greater than 15 and `libfuse`.
-4. Bash tools: `unzip`, `bc`,  and `wget`.
+4. `unzip`, `bc`,  and `wget`.
 
 ### Compiling and Executing Code
  - Make sure the requried libraries are accessible through `$LD_LIBRARY_PATH`.
