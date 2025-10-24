@@ -30,8 +30,8 @@ The source code uses MPI and OpenMP. The implementation incorporates some  compo
      - `make robincc_sample`
    - Batch allocation:
      - Mainly used for processing a set of datasets.
-     - `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg0_siskincc  -df=/path/to/data-folders`
-     - `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg1_robincc  -df=/path/to/data-folders`
+     - SiskinCC: `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg1_siskincc  -df=/path/to/data-folders`
+     - RobinCC: `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg2_robincc  -df=/path/to/data-folders`
      - An example: ![RobinCC Screenshot](docs/images/robincc.png) 
 
 ### Supported Graph Types & Loading Graphs
