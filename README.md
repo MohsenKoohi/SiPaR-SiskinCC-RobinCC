@@ -32,7 +32,8 @@ The source code uses MPI and OpenMP. The implementation incorporates some  compo
      - Mainly used for processing a set of datasets.
      - SiskinCC: `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg1_siskincc  -df=/path/to/data-folders`
      - RobinCC: `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0  ./launcher.sh alg=alg2_robincc  -df=/path/to/data-folders`
-     - An example: ![RobinCC Screenshot](docs/images/robincc.png) 
+     - An example: ![RobinCC Screenshot](docs/images/robincc.png)
+  - Cleaning: `mpiexec --report-bindings -n $SLURM_NNODES -npernode 1 -oversubscribe make clean`
 
 ### Supported Graph Types & Loading Graphs
  - [CompBin format](https://doi.org/10.48550/arXiv.2507.00716), using [WG2CompBin library](https://github.com/MohsenKoohi/WG2CompBin), and 
