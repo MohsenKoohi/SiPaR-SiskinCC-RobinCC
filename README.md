@@ -25,7 +25,7 @@ The source code uses MPI and OpenMP. The implementation incorporates some  compo
    - Interactive allocation:
      - Mainly used for development and/or executing a single dataset.
      - A sample execution of algirthms for [cnr-2000](http://data.law.di.unimi.it/webdata/cnr-2000/) in WebGraph format:
-     - `salloc  -p partition  -N number_of_machines  --exclusive  -t max_exec_time --mem 0`
+     - `salloc  -p partition-name  -N number_of_machines  --exclusive  -t max_exec_time --mem 0`
      - `make siskincc_sample` 
      - `make robincc_sample`
    - Batch allocation:
