@@ -1,4 +1,4 @@
-#  LaganLighter Docs
+#  Docs
 
 - [General Info](0.0-general.md) 
   - [Thread Pinning](0.1-thread-pinning.md)
