@@ -562,7 +562,7 @@ struct par_env* initialize_omp_par_env()
 			if(LL_NO_HT == 1)
 			{
 				char temp[256];
-				long ret = run_command("lscpu | grep Thread | cut -f2 -d: | xargs", temp, 256);
+				long ret = run_command("lscpu | grep \"Thread(s) per core\" | cut -f2 -d: | xargs", temp, 256);
 				unsigned int tpc = atoi(temp);
 				LL_NUM_THREADS /= tpc;
 			} 
